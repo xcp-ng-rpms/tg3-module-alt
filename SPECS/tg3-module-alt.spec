@@ -4,7 +4,7 @@
 %define module_dir override
 
 Summary: %{vendor_name} %{driver_name} device drivers
-Name: %{vendor_label}-%{driver_name}-alt
+Name: %{driver_name}-module-alt
 Version: 3.139j
 Release: 1%{?dist}
 License: GPLv2
