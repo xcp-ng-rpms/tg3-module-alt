@@ -1,0 +1,14 @@
+Don't install man page to the target.
+
+diff --git a/Makefile b/Makefile
+index b4f5105..433e804 100644
+--- a/Makefile
++++ b/Makefile
+@@ -147,7 +147,6 @@ endif
+ 	@if [ "$(PREFIX)" = "" ]; then /sbin/depmod -a ;\
+ 	else echo " *** Run '/sbin/depmod -a' to update the module database.";\
+ 	fi
+-	install -m 444 tg3.4.gz $(PREFIX)/usr/share/man/man4;\
+ 
+ .PHONEY: all clean install
+ 
