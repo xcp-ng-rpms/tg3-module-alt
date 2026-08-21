@@ -6,7 +6,10 @@
 Summary: %{vendor_name} %{driver_name} device drivers
 Name: %{driver_name}-module-alt
 Version: 3.139j
-Release: 1%{?dist}
+Release: 2%{?dist}
+# Built against new kABI after cip rebase
+Requires: xcpng-kernel-kabi = 4.19.325-cip134+
+
 License: GPLv2
 
 # New comment:
@@ -57,4 +60,3 @@ find %{buildroot}/lib/modules/%{kernel_version} -name "*.ko" -type f | xargs chm
 * Tue Dec 12 2023 Gael Duperrey <gduperrey@vates.tech> - 3.319j.1
 - Initial package: version 3.319j
 - Synced from broadcom.com
-
