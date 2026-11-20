@@ -6,7 +6,7 @@
 Summary: %{vendor_name} %{driver_name} device drivers
 Name: %{driver_name}-module-alt
 Version: 3.139j
-Release: 1.0.kernelpreview.1%{?dist}
+Release: 1.0.kernelpreview.1.0.testv0.1%{?dist}
 License: GPLv2
 
 # New comment:
