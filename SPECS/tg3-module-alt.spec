@@ -6,7 +6,7 @@
 Summary: %{vendor_name} %{driver_name} device drivers
 Name: %{driver_name}-module-alt
 Version: 3.139j
-Release: 1%{?dist}
+Release: 1.0.kernelpreview.1%{?dist}
 License: GPLv2
 
 # New comment:
@@ -17,7 +17,7 @@ Source: tg3-%{version}.tar.gz
 Patch0: Makefile.patch
 
 BuildRequires: gcc
-BuildRequires: kernel-devel
+BuildRequires: kernel-devel >= 4.19.325-cip137.8.0.46.16
 Provides: vendor-driver
 Requires: kernel-uname-r = %{kernel_version}
 Requires(post): /usr/sbin/depmod
@@ -54,7 +54,9 @@ find %{buildroot}/lib/modules/%{kernel_version} -name "*.ko" -type f | xargs chm
 /lib/modules/%{kernel_version}/*/*.ko
 
 %changelog
+* Mon Nov 16 2026 Quentin Casasnovas <quentin.casasnovas@vates.tech> - 3.139j-1.0.kernelpreview.1
+- Rebuild for kernel v4.19.325-cip137
+
 * Tue Dec 12 2023 Gael Duperrey <gduperrey@vates.tech> - 3.319j.1
 - Initial package: version 3.319j
 - Synced from broadcom.com
-
